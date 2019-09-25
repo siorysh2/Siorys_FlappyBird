@@ -25,7 +25,11 @@ public class PipesSpawner : MonoBehaviour
 
     void SpawnPipe()
     {
-        Instantiate(prefabPipe, transform); 
-        //Con esta linea estamos instanciando nuestro prefab de tuberias, el programa las ira duplicando segun el Invoke Reapeating
+        if (GameManager.playing == true) // Solo se ejecuta el Instantiate  (spawn) si estamos jugando.
+        {
+            Instantiate(prefabPipe, transform);
+            //Con esta linea estamos instanciando nuestro prefab de tuberias, el programa las ira duplicando segun el Invoke Reapeating
+
+        }
     }
 }

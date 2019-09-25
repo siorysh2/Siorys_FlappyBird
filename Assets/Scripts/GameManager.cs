@@ -10,4 +10,6 @@ public class GameManager : MonoBehaviour
     {
         SceneManager.LoadScene(0); // Recarga de la Scena 0 del juego, en este caso solo tenemos una escena.
     }
+
+    public static bool playing = false; // Esto NUNCA se debe hacer (desde el punto de vista de programacion)
 }
